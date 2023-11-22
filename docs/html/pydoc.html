@@ -1,0 +1,229 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module main</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>main</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C:/users/s5304815/onedrive%20-%20bournemouth%20university/technicaleffects/final/src/main.py">c:\users\s5304815\onedrive - bournemouth university\technicaleffects\final\src\main.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-animateFluid"><strong>animateFluid</strong></a>(widgets, pSpheres, numSpheres)</dt><dd><tt>animates&nbsp;the&nbsp;fluid&nbsp;based&nbsp;on&nbsp;user&nbsp;entered&nbsp;values<br>
+&nbsp;<br>
+widgets:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;user&nbsp;controlled&nbsp;parameter&nbsp;values<br>
+pSpheres:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;all&nbsp;particle&nbsp;instances&nbsp;in&nbsp;the&nbsp;system<br>
+numSpheres:&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;particles&nbsp;in&nbsp;the&nbsp;system.</tt></dd></dl>
+ <dl><dt><a name="-calXSPHVel"><strong>calXSPHVel</strong></a>(velL, clusterRadius, mass, massD, mag, clusterGroups)</dt><dd><tt>calculate&nbsp;XSPH&nbsp;velocity&nbsp;correction&nbsp;for&nbsp;each&nbsp;particle<br>
+velL:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;velocity&nbsp;vector&nbsp;of&nbsp;each&nbsp;particle&nbsp;&nbsp;<br>
+clusterRadius:&nbsp;&nbsp;&nbsp;radius&nbsp;for&nbsp;which&nbsp;particle&nbsp;will&nbsp;influence&nbsp;its&nbsp;neighbours&nbsp;<br>
+mass:&nbsp;&nbsp;&nbsp;&nbsp;average&nbsp;mass&nbsp;of&nbsp;each&nbsp;particle&nbsp;&nbsp;&nbsp;&nbsp;<br>
+massD:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;mass&nbsp;densities&nbsp;of&nbsp;all&nbsp;particles&nbsp;system&nbsp;&nbsp;&nbsp;&nbsp;<br>
+mag:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;magnitude&nbsp;of&nbsp;the&nbsp;distances&nbsp;between&nbsp;each&nbsp;particle&nbsp;and&nbsp;its&nbsp;neighbours<br>
+clusterGroups:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;key&nbsp;value&nbsp;pairs&nbsp;of&nbsp;particles&nbsp;and&nbsp;there&nbsp;neighbours&nbsp;&nbsp;&nbsp;&nbsp;<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;a&nbsp;list&nbsp;within&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;velocities&nbsp;of&nbsp;each&nbsp;particle&nbsp;in&nbsp;the&nbsp;system</tt></dd></dl>
+ <dl><dt><a name="-cancelProc"><strong>cancelProc</strong></a>(winID, *pArgs)</dt></dl>
+ <dl><dt><a name="-createUI"><strong>createUI</strong></a>()</dt><dd><tt>COFFEE&nbsp;MACHINE&nbsp;UI:<br>
+This&nbsp;function&nbsp;controls&nbsp;the&nbsp;appearance&nbsp;of&nbsp;the&nbsp;general&nbsp;window.&nbsp;The&nbsp;general&nbsp;format&nbsp;of&nbsp;the&nbsp;user&nbsp;interface<br>
+will&nbsp;be&nbsp;split&nbsp;into&nbsp;several&nbsp;tabs.&nbsp;There&nbsp;will&nbsp;be&nbsp;tabs&nbsp;that&nbsp;allow&nbsp;uses&nbsp;to&nbsp;control&nbsp;physical&nbsp;paremeters&nbsp;<br>
+including&nbsp;Density,&nbsp;Mass&nbsp;and&nbsp;collision&nbsp;between&nbsp;the&nbsp;particles&nbsp;and&nbsp;a&nbsp;container.&nbsp;<br>
+&nbsp;<br>
+tab&nbsp;1&nbsp;||&nbsp;tab&nbsp;2&nbsp;||&nbsp;tab&nbsp;3&nbsp;||&nbsp;&nbsp;....<br>
+..............<br>
+..............<br>
+..............&nbsp;&nbsp;<br>
+&nbsp;<br>
+Main&nbsp;tab:<br>
+In&nbsp;the&nbsp;main&nbsp;tab&nbsp;users&nbsp;will&nbsp;be&nbsp;able&nbsp;to&nbsp;control&nbsp;physical&nbsp;parameters&nbsp;that&nbsp;affect&nbsp;particles&nbsp;in&nbsp;the&nbsp;system.<br>
+There&nbsp;will&nbsp;also&nbsp;be&nbsp;default&nbsp;buttons&nbsp;that&nbsp;allow&nbsp;users&nbsp;the&nbsp;ability&nbsp;to&nbsp;select&nbsp;pre-defined&nbsp;liquids.&nbsp;By&nbsp;<br>
+selecting&nbsp;these&nbsp;liquids&nbsp;the&nbsp;physical&nbsp;parameters&nbsp;will&nbsp;change&nbsp;according&nbsp;to&nbsp;the&nbsp;best&nbsp;values&nbsp;that&nbsp;simulate&nbsp;that&nbsp;<br>
+particular&nbsp;liquid.<br>
+&nbsp;<br>
+General&nbsp;tab:<br>
+The&nbsp;general&nbsp;tab&nbsp;controls&nbsp;the&nbsp;aesthetic&nbsp;of&nbsp;the&nbsp;particles,&nbsp;other&nbsp;physical&nbsp;parameters&nbsp;and&nbsp;general&nbsp;controls<br>
+that&nbsp;affect&nbsp;individual&nbsp;particles&nbsp;in&nbsp;the&nbsp;system.&nbsp;For&nbsp;example,&nbsp;the&nbsp;particle&nbsp;radius&nbsp;and&nbsp;cluster&nbsp;radius&nbsp;and&nbsp;<br>
+particle&nbsp;colours.&nbsp;Manipulating&nbsp;the&nbsp;cluster&nbsp;radius&nbsp;affects&nbsp;the&nbsp;amount&nbsp;of&nbsp;particles&nbsp;that&nbsp;will&nbsp;be&nbsp;neighbour&nbsp;<br>
+to&nbsp;any&nbsp;particle&nbsp;in&nbsp;the&nbsp;system.&nbsp;There&nbsp;will&nbsp;also&nbsp;be&nbsp;user&nbsp;control&nbsp;over&nbsp;the&nbsp;number&nbsp;of&nbsp;simulated&nbsp;frames&nbsp;and&nbsp;<br>
+the&nbsp;frame&nbsp;rate.&nbsp;It&nbsp;is&nbsp;recommended&nbsp;that&nbsp;the&nbsp;frame&nbsp;rate&nbsp;stay&nbsp;close&nbsp;to&nbsp;0.01&nbsp;to&nbsp;achieve&nbsp;a&nbsp;realistic&nbsp;simulation.<br>
+&nbsp;<br>
+Orientation&nbsp;tab:<br>
+This&nbsp;tab&nbsp;allows&nbsp;the&nbsp;user&nbsp;to&nbsp;specify&nbsp;the&nbsp;type&nbsp;of&nbsp;spawning&nbsp;orientation&nbsp;of&nbsp;the&nbsp;particles.&nbsp;This&nbsp;will<br>
+control&nbsp;the&nbsp;shape&nbsp;to&nbsp;which&nbsp;they&nbsp;spawn&nbsp;when&nbsp;the&nbsp;user&nbsp;initially&nbsp;starts&nbsp;the&nbsp;simulation.<br>
+&nbsp;<br>
+Coffee&nbsp;tab:<br>
+To&nbsp;allow&nbsp;the&nbsp;user&nbsp;more&nbsp;coffee&nbsp;specific&nbsp;controls,&nbsp;this&nbsp;tab&nbsp;includes&nbsp;drop-down&nbsp;menus&nbsp;of&nbsp;coffee&nbsp;roast&nbsp;levels.&nbsp;Each<br>
+roast&nbsp;level&nbsp;automatically&nbsp;adapts&nbsp;the&nbsp;particle&nbsp;colour&nbsp;within&nbsp;the&nbsp;system.&nbsp;A&nbsp;user&nbsp;is&nbsp;also&nbsp;expected&nbsp;to&nbsp;press&nbsp;one<br>
+of&nbsp;the&nbsp;coffee&nbsp;machines&nbsp;and&nbsp;choose&nbsp;a&nbsp;cup&nbsp;before&nbsp;they&nbsp;start&nbsp;the&nbsp;simulation.&nbsp;<br>
+&nbsp;<br>
+The&nbsp;subsequent&nbsp;tabs&nbsp;will&nbsp;inform&nbsp;users&nbsp;of&nbsp;different&nbsp;instructions&nbsp;to&nbsp;best&nbsp;use&nbsp;the&nbsp;simulation,&nbsp;such&nbsp;as&nbsp;appropriate<br>
+physical&nbsp;parameter&nbsp;values&nbsp;and&nbsp;steps&nbsp;to&nbsp;create&nbsp;an&nbsp;effective&nbsp;simulation.</tt></dd></dl>
+ <dl><dt><a name="-deleteGeometry"><strong>deleteGeometry</strong></a>(groupName, *pArgs)</dt><dd><tt>if&nbsp;a&nbsp;group&nbsp;of&nbsp;objects&nbsp;exists&nbsp;by&nbsp;the&nbsp;given&nbsp;groupName,&nbsp;select&nbsp;and&nbsp;delete&nbsp;them<br>
+groupName:&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;of&nbsp;object&nbsp;to&nbsp;be&nbsp;deleted&nbsp;within&nbsp;the&nbsp;scene</tt></dd></dl>
+ <dl><dt><a name="-findBuoyancy"><strong>findBuoyancy</strong></a>(g, massD, mass, b, initialD, mainRadius, numSpheres)</dt><dd><tt>finds&nbsp;buoyancy&nbsp;of&nbsp;each&nbsp;particle&nbsp;in&nbsp;system&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+mainRadius:&nbsp;&nbsp;&nbsp;&nbsp;dimension&nbsp;of&nbsp;system&nbsp;size<br>
+g:&nbsp;&nbsp;&nbsp;&nbsp;gravity&nbsp;acting&nbsp;on&nbsp;particles&nbsp;&nbsp;&nbsp;<br>
+mass:&nbsp;&nbsp;&nbsp;&nbsp;average&nbsp;mass&nbsp;of&nbsp;each&nbsp;particle<br>
+massD:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;mass&nbsp;densities&nbsp;of&nbsp;all&nbsp;particles&nbsp;system<br>
+b:&nbsp;&nbsp;&nbsp;&nbsp;buoyancy&nbsp;constant<br>
+initialD:&nbsp;&nbsp;&nbsp;&nbsp;average&nbsp;density&nbsp;of&nbsp;particles&nbsp;throughout&nbsp;entire&nbsp;system<br>
+numSpheres:&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;particles&nbsp;in&nbsp;the&nbsp;system&nbsp;&nbsp;<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;within&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;buoyancy&nbsp;force<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acting&nbsp;on&nbsp;each&nbsp;particle.</tt></dd></dl>
+ <dl><dt><a name="-findDistanceBetweenP"><strong>findDistanceBetweenP</strong></a>(pos, match)</dt><dd><tt>finds&nbsp;the&nbsp;distance&nbsp;between&nbsp;particles&nbsp;and&nbsp;their&nbsp;neighbours<br>
+&nbsp;<br>
+pos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position&nbsp;of&nbsp;each&nbsp;particle&nbsp;in&nbsp;system<br>
+objL:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;x,y,z&nbsp;positions&nbsp;of&nbsp;each&nbsp;particle&nbsp;in&nbsp;system<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;distance&nbsp;coordinates&nbsp;between&nbsp;particle&nbsp;and&nbsp;its&nbsp;neighbours</tt></dd></dl>
+ <dl><dt><a name="-findForces"><strong>findForces</strong></a>(pressureF, viscosityF, tractionF, bForce, mass, g)</dt><dd><tt>finds&nbsp;the&nbsp;sum&nbsp;of&nbsp;all&nbsp;forces&nbsp;per&nbsp;frame&nbsp;of&nbsp;animation<br>
+&nbsp;<br>
+pressureF:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;pressure&nbsp;force&nbsp;coordinate&nbsp;values&nbsp;for&nbsp;particle<br>
+viscosityF:&nbsp;&nbsp;&nbsp;&nbsp;viscosity&nbsp;forces&nbsp;acting&nbsp;on&nbsp;each&nbsp;particle<br>
+g:&nbsp;&nbsp;&nbsp;&nbsp;gravitational&nbsp;forces&nbsp;acting&nbsp;on&nbsp;each&nbsp;particle&nbsp;in&nbsp;system<br>
+mass:&nbsp;&nbsp;&nbsp;&nbsp;mass&nbsp;of&nbsp;each&nbsp;particle<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;coordinates&nbsp;retaining&nbsp;force&nbsp;values&nbsp;for&nbsp;each&nbsp;particle&nbsp;in&nbsp;system</tt></dd></dl>
+ <dl><dt><a name="-findMagnitude"><strong>findMagnitude</strong></a>(pos)</dt><dd><tt>finds&nbsp;magnitude&nbsp;between&nbsp;cluster&nbsp;particles&nbsp;in&nbsp;dictionary<br>
+&nbsp;<br>
+objList:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;to&nbsp;retain&nbsp;list&nbsp;of&nbsp;distance&nbsp;between&nbsp;particle&nbsp;and&nbsp;neighbour&nbsp;position<br>
+clusterGroupDist:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;of&nbsp;key&nbsp;value,&nbsp;clusterGroup&nbsp;to&nbsp;coordinates&nbsp;of&nbsp;particles&nbsp;in&nbsp;clusterGroup<br>
+pSpherePos:&nbsp;&nbsp;&nbsp;&nbsp;instance&nbsp;names&nbsp;of&nbsp;all&nbsp;particles&nbsp;in&nbsp;system<br>
+pList:&nbsp;&nbsp;&nbsp;&nbsp;temporary&nbsp;list&nbsp;containing&nbsp;x,y,z&nbsp;coordinates&nbsp;of&nbsp;distance&nbsp;between&nbsp;particles&nbsp;and&nbsp;neighbours<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;list&nbsp;containing&nbsp;distance&nbsp;between&nbsp;each&nbsp;particle&nbsp;to&nbsp;its&nbsp;neighbours</tt></dd></dl>
+ <dl><dt><a name="-findMatchingPairs"><strong>findMatchingPairs</strong></a>(clusterGroup, pSpherePos)</dt><dd><tt>finds&nbsp;the&nbsp;matching&nbsp;particle&nbsp;position&nbsp;to&nbsp;clusterGroup&nbsp;particles<br>
+&nbsp;<br>
+clusterGroup:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;every&nbsp;particle&nbsp;and&nbsp;its&nbsp;neighbours&nbsp;within&nbsp;a&nbsp;close&nbsp;proximity&nbsp;to&nbsp;that&nbsp;particle<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.e&nbsp;clusterGroup1:{[u'pSphere1],[u'pSphere7],u'pSphere13]...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clusterGroup2:{[u'pSphere2],[u'pSphere9],u'pSphere18]...}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+pSpherePos:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;containing&nbsp;position&nbsp;values&nbsp;of&nbsp;every&nbsp;particle&nbsp;in&nbsp;system<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;the&nbsp;clusterGroup&nbsp;key&nbsp;is&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;particle&nbsp;number,&nbsp;return&nbsp;a&nbsp;list&nbsp;containing&nbsp;positions&nbsp;of&nbsp;particle&nbsp;instances<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;corresponding&nbsp;to&nbsp;that&nbsp;number.</tt></dd></dl>
+ <dl><dt><a name="-findNeighbour"><strong>findNeighbour</strong></a>(clusterRadius, pSpheresPos, pSpheres, particleRadius)</dt><dd><tt>puts&nbsp;particles&nbsp;within&nbsp;a&nbsp;cluster&nbsp;group&nbsp;dictionary&nbsp;if&nbsp;within&nbsp;the&nbsp;specified<br>
+cluster&nbsp;radius.&nbsp;<br>
+&nbsp;<br>
+clusterRadius:&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;cluster&nbsp;radius&nbsp;is&nbsp;the&nbsp;domain&nbsp;of&nbsp;each&nbsp;particle,&nbsp;which&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;permits&nbsp;particles&nbsp;within&nbsp;the&nbsp;domain&nbsp;if&nbsp;they&nbsp;are&nbsp;less&nbsp;than&nbsp;or&nbsp;equal&nbsp;to&nbsp;the&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value.<br>
+pSpherePos:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;all&nbsp;particles&nbsp;in&nbsp;the&nbsp;system<br>
+particleRadius:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;radius&nbsp;of&nbsp;each&nbsp;particle&nbsp;within&nbsp;the&nbsp;system<br>
+pSpheres:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;containing&nbsp;instance&nbsp;names&nbsp;for&nbsp;each&nbsp;particle&nbsp;in&nbsp;system<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;cluster&nbsp;group&nbsp;dictionary&nbsp;of&nbsp;the&nbsp;clusterGroup&nbsp;name&nbsp;and&nbsp;any&nbsp;neighbouring<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;particles&nbsp;within&nbsp;the&nbsp;domain&nbsp;of&nbsp;another&nbsp;particle&nbsp;will&nbsp;be&nbsp;within&nbsp;its&nbsp;clusterGroup.</tt></dd></dl>
+ <dl><dt><a name="-findNeighbourPos"><strong>findNeighbourPos</strong></a>(clusterGroup)</dt><dd><tt>finds&nbsp;the&nbsp;position&nbsp;of&nbsp;particles&nbsp;within&nbsp;each&nbsp;clusterGroup<br>
+&nbsp;<br>
+clusterGroup:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;every&nbsp;particle&nbsp;and&nbsp;its&nbsp;neighbours&nbsp;within&nbsp;a&nbsp;close&nbsp;proximity&nbsp;to&nbsp;that&nbsp;particle<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;within&nbsp;a&nbsp;list&nbsp;of&nbsp;coordinates&nbsp;indicating&nbsp;the&nbsp;position&nbsp;of&nbsp;each&nbsp;particles</tt></dd></dl>
+ <dl><dt><a name="-findPos"><strong>findPos</strong></a>(pSpheresPos)</dt><dd><tt>finds&nbsp;the&nbsp;position&nbsp;of&nbsp;particles&nbsp;generated<br>
+pSpheresPos:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;containing&nbsp;instance&nbsp;names&nbsp;of&nbsp;each&nbsp;particle&nbsp;in&nbsp;system<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;within&nbsp;a&nbsp;list&nbsp;of&nbsp;coordinates&nbsp;indicating&nbsp;the&nbsp;position&nbsp;of&nbsp;every&nbsp;particle</tt></dd></dl>
+ <dl><dt><a name="-findPressure"><strong>findPressure</strong></a>(mass, numParticles, mainRadius, initialD, massD, k)</dt><dd><tt>calculate&nbsp;the&nbsp;pressure&nbsp;acting&nbsp;on&nbsp;each&nbsp;particle&nbsp;in&nbsp;system<br>
+&nbsp;<br>
+pressureL:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;containing&nbsp;particle&nbsp;pressure&nbsp;values<br>
+massD:&nbsp;&nbsp;&nbsp;&nbsp;mass&nbsp;density&nbsp;of&nbsp;each&nbsp;particle<br>
+initialD:&nbsp;&nbsp;&nbsp;&nbsp;average&nbsp;density&nbsp;of&nbsp;particles&nbsp;throughout&nbsp;entire&nbsp;system<br>
+mainRadius:&nbsp;&nbsp;&nbsp;&nbsp;dimension&nbsp;of&nbsp;system&nbsp;size<br>
+numParticles:&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;particles&nbsp;in&nbsp;system<br>
+mass:&nbsp;&nbsp;&nbsp;&nbsp;average&nbsp;mass&nbsp;of&nbsp;each&nbsp;particle<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;individual&nbsp;particle&nbsp;pressures</tt></dd></dl>
+ <dl><dt><a name="-findPressureForce"><strong>findPressureForce</strong></a>(pressureL, massD, mass, clusterGroup, clusterRadius, positionV, magL)</dt><dd><tt>finds&nbsp;the&nbsp;pressure&nbsp;force&nbsp;between&nbsp;each&nbsp;particle&nbsp;and&nbsp;its&nbsp;neighbour<br>
+&nbsp;<br>
+pressureL:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;containing&nbsp;pressure&nbsp;fields&nbsp;of&nbsp;each&nbsp;particle<br>
+mass:&nbsp;&nbsp;&nbsp;&nbsp;average&nbsp;mass&nbsp;of&nbsp;each&nbsp;particle<br>
+massD:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;mass&nbsp;density&nbsp;field&nbsp;values&nbsp;of&nbsp;each&nbsp;particle<br>
+clusterGroup:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;clusterGroups&nbsp;and&nbsp;particles&nbsp;within&nbsp;them<br>
+clusterRadius:&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;radius&nbsp;for&nbsp;which&nbsp;a&nbsp;neighbouring&nbsp;particle&nbsp;is&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contained&nbsp;in&nbsp;that&nbsp;neighbourhood<br>
+positionV:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;containing&nbsp;positions&nbsp;of&nbsp;cluster&nbsp;particles&nbsp;in&nbsp;neighbourhood<br>
+magL:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;magnitudes&nbsp;for&nbsp;each&nbsp;particle&nbsp;in&nbsp;cluster&nbsp;neighbourhood</tt></dd></dl>
+ <dl><dt><a name="-findTractionF"><strong>findTractionF</strong></a>(mass, massD, mag, pos, clusterRadius, delta, clusterGroups)</dt><dd><tt>finds&nbsp;surface&nbsp;traction&nbsp;forces&nbsp;acting&nbsp;on&nbsp;particles&nbsp;interacting&nbsp;over&nbsp;collision&nbsp;surface.<br>
+&nbsp;<br>
+mass:&nbsp;&nbsp;&nbsp;&nbsp;average&nbsp;mass&nbsp;of&nbsp;each&nbsp;particle<br>
+massD:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;mass&nbsp;densities&nbsp;of&nbsp;all&nbsp;particles&nbsp;system<br>
+mag:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;magnitude&nbsp;of&nbsp;the&nbsp;distances&nbsp;between&nbsp;each&nbsp;particle&nbsp;and&nbsp;its&nbsp;neighbours<br>
+pos:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;position&nbsp;of&nbsp;each&nbsp;particle&nbsp;in&nbsp;the&nbsp;system<br>
+clusterRadius:&nbsp;&nbsp;&nbsp;&nbsp;maximum&nbsp;radius&nbsp;for&nbsp;which&nbsp;a&nbsp;neighbouring&nbsp;particle&nbsp;is&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contained&nbsp;in&nbsp;that&nbsp;neighbourhood&nbsp;&nbsp;&nbsp;&nbsp;<br>
+delta:&nbsp;&nbsp;&nbsp;&nbsp;surface&nbsp;traction&nbsp;constant<br>
+clusterGroups:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;key&nbsp;value&nbsp;pairs&nbsp;of&nbsp;particles&nbsp;and&nbsp;there&nbsp;neighbours<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;creates&nbsp;a&nbsp;list&nbsp;within&nbsp;a&nbsp;list&nbsp;of&nbsp;traction&nbsp;force&nbsp;vector&nbsp;values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acting&nbsp;on&nbsp;each&nbsp;particle&nbsp;in&nbsp;the&nbsp;system</tt></dd></dl>
+ <dl><dt><a name="-findViscosityForce"><strong>findViscosityForce</strong></a>(clusterGroup, velL, massD, mass, viscosity, clusterRadius, magnitude)</dt><dd><tt>finds&nbsp;the&nbsp;viscosity&nbsp;force&nbsp;between&nbsp;particles&nbsp;in&nbsp;a&nbsp;cluster&nbsp;neighbourhood<br>
+&nbsp;<br>
+clusterGroup:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;key&nbsp;value&nbsp;pairs&nbsp;of&nbsp;particles&nbsp;and&nbsp;there&nbsp;neighbours<br>
+velL:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;velocities&nbsp;of&nbsp;neighbouring&nbsp;particles&nbsp;in&nbsp;cluster&nbsp;group<br>
+massD:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;mass&nbsp;densities&nbsp;of&nbsp;particles&nbsp;in&nbsp;neighbourhood<br>
+viscosity:&nbsp;&nbsp;&nbsp;&nbsp;viscosity&nbsp;constant<br>
+mass:&nbsp;&nbsp;&nbsp;&nbsp;mass&nbsp;of&nbsp;each&nbsp;particle&nbsp;and&nbsp;its&nbsp;neighbours&nbsp;in&nbsp;a&nbsp;cluster<br>
+clusterRadius:&nbsp;&nbsp;&nbsp;&nbsp;region&nbsp;of&nbsp;affected&nbsp;particles&nbsp;in&nbsp;neighbourhood<br>
+magnitude:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;magnitudes&nbsp;of&nbsp;distances&nbsp;between&nbsp;particles&nbsp;and&nbsp;their&nbsp;neighbours<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;within&nbsp;a&nbsp;list&nbsp;of&nbsp;viscosity&nbsp;vector&nbsp;fields&nbsp;affecting&nbsp;each&nbsp;particle</tt></dd></dl>
+ <dl><dt><a name="-loadDefaultParams"><strong>loadDefaultParams</strong></a>(widgets, *pArgs)</dt><dd><tt>uses&nbsp;dictionary&nbsp;values&nbsp;from&nbsp;local&nbsp;widgets&nbsp;dictionary&nbsp;in&nbsp;UI,&nbsp;and&nbsp;changes<br>
+physical&nbsp;parameters&nbsp;to&nbsp;default&nbsp;values&nbsp;by&nbsp;the&nbsp;specified&nbsp;type&nbsp;of&nbsp;liquid.<br>
+widgets:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;values&nbsp;to&nbsp;all&nbsp;UI&nbsp;controls&nbsp;in&nbsp;the&nbsp;program</tt></dd></dl>
+ <dl><dt><a name="-loadObjProc"><strong>loadObjProc</strong></a>(filePath, name, objName, *pArgs)</dt><dd><tt>function&nbsp;that&nbsp;allows&nbsp;.obj&nbsp;files&nbsp;to&nbsp;import&nbsp;into&nbsp;the&nbsp;current&nbsp;coffee&nbsp;scene&nbsp;in&nbsp;maya.<br>
+&nbsp;<br>
+filePath:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;file&nbsp;path&nbsp;to&nbsp;which&nbsp;the&nbsp;.obj&nbsp;files&nbsp;will&nbsp;be&nbsp;imported&nbsp;from<br>
+name:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;abbrevated&nbsp;name&nbsp;given&nbsp;to&nbsp;.obj&nbsp;in&nbsp;the&nbsp;given&nbsp;filePath.&nbsp;E.g&nbsp;cup.obj&nbsp;will&nbsp;be&nbsp;cup<br>
+objName:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;.obj&nbsp;within&nbsp;the&nbsp;maya&nbsp;scene</tt></dd></dl>
+ <dl><dt><a name="-massDensity"><strong>massDensity</strong></a>(mass, clusterRadius, mainRadius, magL, initialD, numParticles)</dt><dd><tt>computes&nbsp;the&nbsp;mass&nbsp;density&nbsp;of&nbsp;each&nbsp;particle&nbsp;within&nbsp;a&nbsp;cluster&nbsp;neighbourhood<br>
+&nbsp;<br>
+clusterRadius:&nbsp;&nbsp;&nbsp;&nbsp;radius&nbsp;of&nbsp;particles&nbsp;within&nbsp;the&nbsp;neighbourhood<br>
+magL:&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;magnitude&nbsp;of&nbsp;distances&nbsp;between&nbsp;particles&nbsp;and&nbsp;their&nbsp;neighbours&nbsp;in&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;cluster<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;mass&nbsp;density&nbsp;for&nbsp;each&nbsp;particle&nbsp;in&nbsp;system</tt></dd></dl>
+ <dl><dt><a name="-queryDirectory"><strong>queryDirectory</strong></a>(*pArgs)</dt><dd><tt>asks&nbsp;the&nbsp;user&nbsp;to&nbsp;enter&nbsp;the&nbsp;absolute&nbsp;file&nbsp;path&nbsp;towards&nbsp;the&nbsp;folder&nbsp;containing&nbsp;all&nbsp;the&nbsp;essential&nbsp;data&nbsp;for&nbsp;the&nbsp;program.</tt></dd></dl>
+ <dl><dt><a name="-randomBoxGenerator"><strong>randomBoxGenerator</strong></a>(widgets)</dt><dd><tt>randomly&nbsp;generate&nbsp;a&nbsp;cluster&nbsp;of&nbsp;spheres&nbsp;within&nbsp;a&nbsp;bounding&nbsp;radius</tt></dd></dl>
+ <dl><dt><a name="-randomCylinderGenerator"><strong>randomCylinderGenerator</strong></a>(widgets)</dt><dd><tt>creates&nbsp;a&nbsp;random&nbsp;distributin&nbsp;of&nbsp;particles&nbsp;in&nbsp;a&nbsp;cylindrical&nbsp;spawn&nbsp;orientation</tt></dd></dl>
+ <dl><dt><a name="-resetProc1"><strong>resetProc1</strong></a>(widgets, *pArgs)</dt><dd><tt>resets&nbsp;buttons&nbsp;in&nbsp;the&nbsp;main&nbsp;tab&nbsp;to&nbsp;default&nbsp;values.&nbsp;Defaults&nbsp;are&nbsp;based&nbsp;on&nbsp;<br>
+physical&nbsp;parameters&nbsp;to&nbsp;simulate&nbsp;a&nbsp;realistic&nbsp;water.<br>
+widgets:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;values&nbsp;of&nbsp;all&nbsp;controls&nbsp;within&nbsp;the&nbsp;UI</tt></dd></dl>
+ <dl><dt><a name="-resetProc2"><strong>resetProc2</strong></a>(widgets, *pArgs)</dt><dd><tt>resets&nbsp;buttons&nbsp;within&nbsp;the&nbsp;General&nbsp;tab&nbsp;whenever&nbsp;the&nbsp;reset&nbsp;button&nbsp;is&nbsp;pressed&nbsp;by&nbsp;users.<br>
+widgets:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;values&nbsp;of&nbsp;all&nbsp;controls&nbsp;within&nbsp;the&nbsp;UI</tt></dd></dl>
+ <dl><dt><a name="-roastProc"><strong>roastProc</strong></a>(widgets, *pArgs)</dt><dd><tt>changes&nbsp;the&nbsp;colour&nbsp;of&nbsp;the&nbsp;particles&nbsp;corresponding&nbsp;to&nbsp;a&nbsp;coffee&nbsp;roast&nbsp;level&nbsp;specified&nbsp;by&nbsp;the&nbsp;user.<br>
+widgets:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;values&nbsp;of&nbsp;all&nbsp;controls&nbsp;within&nbsp;the&nbsp;UI</tt></dd></dl>
+ <dl><dt><a name="-selectOrientationForm"><strong>selectOrientationForm</strong></a>(widgets, *pArgs)</dt><dd><tt>if&nbsp;an&nbsp;orientation&nbsp;type&nbsp;is&nbsp;selected&nbsp;within&nbsp;the&nbsp;orientation&nbsp;tab,&nbsp;enable&nbsp;or&nbsp;disable&nbsp;the&nbsp;radio&nbsp;<br>
+button&nbsp;that&nbsp;attaches&nbsp;to&nbsp;that&nbsp;specific&nbsp;orientation.&nbsp;E.g&nbsp;if&nbsp;cylindrical&nbsp;radio&nbsp;button&nbsp;is&nbsp;<br>
+selected,&nbsp;the&nbsp;corresponding&nbsp;'Cylindrical&nbsp;radio&nbsp;button&nbsp;will&nbsp;be&nbsp;flagged&nbsp;as&nbsp;selected'<br>
+widgets:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;values&nbsp;of&nbsp;all&nbsp;controls&nbsp;within&nbsp;the&nbsp;UI</tt></dd></dl>
+ <dl><dt><a name="-selectOrientationType"><strong>selectOrientationType</strong></a>(widgets, *pArgs)</dt><dd><tt>if&nbsp;the&nbsp;user&nbsp;selects&nbsp;an&nbsp;orientation&nbsp;type&nbsp;within&nbsp;the&nbsp;general&nbsp;tab,<br>
+informs&nbsp;the&nbsp;user&nbsp;of&nbsp;the&nbsp;type&nbsp;of&nbsp;orientation&nbsp;they&nbsp;selected.&nbsp;Options&nbsp;are&nbsp;<br>
+uniform&nbsp;or&nbsp;random.&nbsp;<br>
+widgets:&nbsp;&nbsp;&nbsp;&nbsp;dictionary&nbsp;containing&nbsp;values&nbsp;of&nbsp;all&nbsp;controls&nbsp;within&nbsp;the&nbsp;UI</tt></dd></dl>
+ <dl><dt><a name="-setMaterial"><strong>setMaterial</strong></a>(objName, materialType, colour)</dt><dd><tt>Assigns&nbsp;a&nbsp;material&nbsp;to&nbsp;the&nbsp;object&nbsp;'objectName'<br>
+&nbsp;<br>
+&nbsp;objectName&nbsp;&nbsp;&nbsp;:&nbsp;is&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;3D&nbsp;object&nbsp;in&nbsp;the&nbsp;scene<br>
+&nbsp;materialType&nbsp;:&nbsp;is&nbsp;string&nbsp;that&nbsp;specifies&nbsp;the&nbsp;type&nbsp;of&nbsp;the&nbsp;sufrace&nbsp;shader,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this&nbsp;can&nbsp;be&nbsp;any&nbsp;of&nbsp;Maya's&nbsp;valid&nbsp;surface&nbsp;shaders&nbsp;such&nbsp;as:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lambert,&nbsp;blin,&nbsp;phong,&nbsp;etc.<br>
+&nbsp;colour&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;is&nbsp;a&nbsp;3-tuple&nbsp;of&nbsp;(R,G,B)&nbsp;values&nbsp;within&nbsp;the&nbsp;range&nbsp;[0,1]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;which&nbsp;specify&nbsp;the&nbsp;colour&nbsp;of&nbsp;the&nbsp;material<br>
+&nbsp;On&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;'objName'&nbsp;has&nbsp;been&nbsp;assigned&nbsp;a&nbsp;new&nbsp;material&nbsp;according&nbsp;to&nbsp;the&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;values&nbsp;of&nbsp;the&nbsp;procedure,&nbsp;and&nbsp;a&nbsp;tuple&nbsp;(of&nbsp;two&nbsp;strings)&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;which&nbsp;contains&nbsp;the&nbsp;new&nbsp;shading&nbsp;group&nbsp;name,&nbsp;and&nbsp;the&nbsp;new&nbsp;shader<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;is&nbsp;returned&nbsp;to&nbsp;the&nbsp;caller<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Code&nbsp;from&nbsp;Xiasong&nbsp;Yang&nbsp;ends&nbsp;here</tt></dd></dl>
+ <dl><dt><a name="-startSimulation"><strong>startSimulation</strong></a>(widgets, *pArgs)</dt><dd><tt>starts&nbsp;the&nbsp;simulation&nbsp;using&nbsp;values&nbsp;specified&nbsp;by&nbsp;user&nbsp;within&nbsp;the&nbsp;program.</tt></dd></dl>
+ <dl><dt><a name="-uniformBoxGenerator"><strong>uniformBoxGenerator</strong></a>(widgets)</dt><dd><tt>randomly&nbsp;generate&nbsp;a&nbsp;cluster&nbsp;of&nbsp;spheres&nbsp;within&nbsp;a&nbsp;bounding&nbsp;radius</tt></dd></dl>
+ <dl><dt><a name="-uniformCylinderGenerator"><strong>uniformCylinderGenerator</strong></a>(widgets)</dt><dd><tt>creates&nbsp;a&nbsp;uniform&nbsp;cylinder&nbsp;of&nbsp;particles&nbsp;close&nbsp;to&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;number&nbsp;of&nbsp;spheres&nbsp;the&nbsp;user&nbsp;specifies.</tt></dd></dl>
+ <dl><dt><a name="-updateForce"><strong>updateForce</strong></a>(mass, clusterGroups, clusterRadius, mainRadius, velL, mag, pos, dist, viscosity, g, b, k, delta, numSpheres, density, massD)</dt><dd><tt>updates&nbsp;forces&nbsp;based&nbsp;on&nbsp;particles&nbsp;in&nbsp;system&nbsp;and&nbsp;constant&nbsp;physical&nbsp;properties<br>
+&nbsp;<br>
+pSpheres:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;containing&nbsp;instances&nbsp;of&nbsp;all&nbsp;particles&nbsp;in&nbsp;system<br>
+mainRadius:&nbsp;&nbsp;&nbsp;&nbsp;size&nbsp;of&nbsp;the&nbsp;particle&nbsp;system<br>
+clusterRadius:&nbsp;&nbsp;&nbsp;&nbsp;radius&nbsp;for&nbsp;which&nbsp;particle&nbsp;will&nbsp;influence&nbsp;its&nbsp;neighbours<br>
+mass:&nbsp;&nbsp;&nbsp;&nbsp;mass&nbsp;of&nbsp;each&nbsp;particle<br>
+g:&nbsp;&nbsp;&nbsp;&nbsp;gravity&nbsp;force<br>
+velL:&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;containing&nbsp;x,y,z&nbsp;coordinates&nbsp;of&nbsp;each&nbsp;particle&nbsp;velocity<br>
+numSpheres:&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;particles&nbsp;in&nbsp;system<br>
+return:&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;of&nbsp;coordinates&nbsp;retaining&nbsp;the&nbsp;force&nbsp;acting&nbsp;on&nbsp;each&nbsp;particle&nbsp;x,y,z&nbsp;coordinates</tt></dd></dl>
+</td></tr></table>
+</body></html>
